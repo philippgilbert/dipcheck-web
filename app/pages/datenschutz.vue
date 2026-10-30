@@ -59,14 +59,13 @@ useHead({ title: 'Datenschutz – DipCheck' })
     <p>
       <strong>Rechtsgrundlage</strong> ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).
       Du kannst sie jederzeit mit Wirkung für die Zukunft widerrufen. Nutze dafür den Abmeldelink
-      in jeder E-Mail oder schreib uns eine E-Mail. Nach der Abmeldung löschen wir dein Abo
-      sofort.
+      in jeder E-Mail oder schreib uns eine E-Mail. Nach der Abmeldung löschen wir dein Abo.
     </p>
 
     <h2>5. E-Mail-Versand über Brevo</h2>
     <p>
-      Für den Versand der E-Mails nutzen wir den Dienst Brevo der Sendinblue GmbH,
-      Köpenicker Straße 126, 10179 Berlin. Brevo verarbeitet deine E-Mail-Adresse und den Inhalt
+      Für den Versand der E-Mails nutzen wir Brevo (Brevo GmbH, Köpenicker Straße 126,
+      10179 Berlin). Brevo verarbeitet deine E-Mail-Adresse und den Inhalt
       der E-Mails in unserem Auftrag. Mit Brevo besteht ein Vertrag zur Auftragsverarbeitung
       nach Art. 28 DSGVO.
       Brevo erfasst, ob E-Mails geöffnet und Links angeklickt werden. Dafür enthalten die E-Mails
