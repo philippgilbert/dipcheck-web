@@ -1,0 +1,237 @@
+:root {
+  --color-bg: #f3f7fa;
+  --color-surface: #ffffff;
+  --color-text: #14232f;
+  --color-muted: #5a6b79;
+  --color-border: #d9e3ea;
+  --color-primary: #0b6fa4;
+  --color-primary-hover: #095a85;
+  --color-primary-soft: #e4f2fa;
+  --color-on-primary: #ffffff;
+  --color-error: #b3261e;
+  --color-success: #1e6b3a;
+  --hero-gradient: linear-gradient(135deg, #0a5f8e 0%, #1688c4 55%, #3fb0dc 100%);
+  --shadow: 0 1px 2px rgb(20 35 47 / 0.04), 0 8px 24px rgb(20 35 47 / 0.06);
+  --radius: 10px;
+  --radius-lg: 18px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0e1820;
+    --color-surface: #15222c;
+    --color-text: #e6eef3;
+    --color-muted: #9aabb8;
+    --color-border: #263642;
+    --color-primary: #4fb3e8;
+    --color-primary-hover: #7cc7ef;
+    --color-primary-soft: #18303f;
+    --color-on-primary: #08202e;
+    --color-error: #ff8a80;
+    --color-success: #7fd49c;
+    --hero-gradient: linear-gradient(135deg, #0a3e5c 0%, #0f5f8c 55%, #1a7fae 100%);
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.25);
+    color-scheme: dark;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: var(--color-primary);
+  text-underline-offset: 2px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+main {
+  flex: 1;
+}
+
+.site-header {
+  padding: 1.5rem 0;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.logo svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-primary);
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  margin-top: 4rem;
+  padding: 2rem 0 2.5rem;
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+/* Shared building blocks */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  margin: 0;
+}
+
+.card p {
+  margin: 0;
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+.message {
+  margin: 0;
+}
+
+.message.error {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--color-error);
+}
+
+button {
+  align-self: flex-start;
+  padding: 0.75rem 1.75rem;
+  font: inherit;
+  font-weight: 600;
+  color: var(--color-on-primary);
+  background: var(--color-primary);
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.15s, transform 0.1s;
+}
+
+button:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  color: var(--color-primary);
+  background: transparent;
+  border: 1px solid var(--color-primary);
+}
+
+button.secondary:hover {
+  background: var(--color-primary-soft);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+@media (max-width: 32rem) {
+  .card {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+/* Text pages like imprint and privacy policy */
+.prose {
+  padding: 1rem 0;
+}
+
+.prose h1 {
+  margin: 1rem 0 1.5rem;
+  font-size: 2rem;
+}
+
+.prose h2 {
+  margin: 2.25rem 0 0.5rem;
+  font-size: 1.125rem;
+}
+
+.prose p,
+.prose ul {
+  margin: 0 0 0.875rem;
+}
+
+.prose .updated {
+  margin-top: 2.5rem;
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+@media (max-width: 32rem) {
+  .site-header {
+    padding: 1rem 0;
+  }
+
+  .site-footer {
+    margin-top: 2.5rem;
+  }
+}
